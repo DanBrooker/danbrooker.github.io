@@ -1,0 +1,13 @@
+---
+layout: post
+title:  "Core Data"
+date:   2014-10-03 23:23:23
+categories: cocoa
+tags: data
+published: false
+---
+
+[Mogenerator][mogenerator]
+
+
+[mogenerator]:      http://jekyllrb.com
