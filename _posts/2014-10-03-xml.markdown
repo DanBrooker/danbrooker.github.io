@@ -1,8 +1,0 @@
----
-layout: post
-title:  "XML"
-date:   2014-10-03 23:23:23
-tags: xml
-category: general
-published: false
----

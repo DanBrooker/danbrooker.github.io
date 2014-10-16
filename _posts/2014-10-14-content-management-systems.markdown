@@ -4,13 +4,14 @@ title:  "Content Management Systems"
 date:   2014-10-14 23:23:23
 tags: CMS web backend admin
 categories: web
+published: true
 ---
 
 Content management systems (CMS) are standard place for blogs and websites. There are many CMS'; [Wordpress][wordpress], [Refinery][refinery], [SilverStripe][silverstripe] to name a few.
 
 
 
-## Desire-able Qualities
+## Desirable Qualities
 
 * Easy setup
 * Easy to Maintain

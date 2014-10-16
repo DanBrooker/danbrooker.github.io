@@ -4,6 +4,7 @@ title:  "Swift & Objective-C"
 date:   2014-10-06 23:23:23
 tags: swift obj-c
 categories: cocoa
+published: true
 ---
 
 You can include and use CocoaPods in a swift project.

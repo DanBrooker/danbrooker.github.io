@@ -1,0 +1,48 @@
+---
+layout: post
+title:  "Dates"
+date:   2014-10-04 23:23:23
+tags: dates time timezones ruby javascript
+category: programming
+published: true
+---
+
+For date portability between server and client, and between timezones, it is best to store times and dates in UTC (GMT +0) and then convert them to the user timezone for displaying.
+Dates should be formatted in ISO 8601 `2014-10-04T23:23:23Z`
+
+# Cocoa
+
+{% highlight objective-c %}
+NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+
+dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
+dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.000'Z'";
+
+// NSDate from NSString
+NSDate *date = [dateFormatter dateFromString:"2014-10-04T23:23:23Z"];
+
+// NSString from NSDate
+NSString *string = [dateFormatter stringFromDate:date];
+{% endhighlight %}
+
+# Ruby
+
+{% highlight ruby %}
+# String from Time
+string = Time.now.utc.iso8601
+
+# Time from String
+time = Time.iso8601("2010-09-06T12:27:00.10-05:00")
+{% endhighlight %}
+
+# Javascript
+
+{% highlight javascript %}
+var date = new Date();
+// String from Date
+var string = date.toISOString();
+
+// Date from String
+date = Date.parse("2014-10-04T23:23:23Z")
+{% endhighlight %}
