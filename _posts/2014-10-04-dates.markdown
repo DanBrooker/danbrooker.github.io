@@ -2,7 +2,7 @@
 layout: post
 title:  "Dates"
 date:   2014-10-04 23:23:23
-tags: dates time timezones ruby javascript
+tags: dates time timezones objective-c objc ruby javascript swift java
 category: programming
 published: true
 ---
@@ -10,20 +10,37 @@ published: true
 For date portability between server and client, and between timezones, it is best to store times and dates in UTC (GMT +0) and then convert them to the user timezone for displaying.
 Dates should be formatted in ISO 8601 `2014-10-04T23:23:23.000Z`
 
-# Cocoa
+# Objective-C
 
 {% highlight objective-c %}
 NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 
 dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
 dateFormatter.timeZone = [NSTimeZone timeZoneWithAbbreviation:@"UTC"];
-dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ss.SSS'Z'";
+dateFormatter.dateFormat = @"yyyy-MM-dd'T'HH:mm:ssZZZZZ";
 
 // NSDate from NSString
 NSDate *date = [dateFormatter dateFromString:"2014-10-04T23:23:23.000Z"];
 
 // NSString from NSDate
 NSString *string = [dateFormatter stringFromDate:date];
+{% endhighlight %}
+
+# Swift
+
+{% highlight swift %}
+let dateFormatter = NSDateFormatter()
+
+dateFormatter.locale = NSLocale(localeIdentifier:"en_US_POSIX")
+dateFormatter.timeZone = NSTimeZone(name:"UTC")
+dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZZZZZ"
+
+// NSDate from NSString
+if let date = dateFormatter.dateFromString("2014-10-04T23:23:23.000Z") {
+
+    // String from NSDate
+    let string = dateFormatter.stringFromDate(date)
+}
 {% endhighlight %}
 
 # Ruby
@@ -45,4 +62,14 @@ var string = date.toISOString();
 
 // Date from String
 date = Date.parse("2014-10-04T23:23:23.000Z")
+{% endhighlight %}
+
+# Java
+
+{% highlight java %}
+SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ssZZZZZ");
+
+Date date = format.parse(string);
+
+String string = formatter.format(date);
 {% endhighlight %}

@@ -3,11 +3,11 @@ layout: post
 title:  "Push Notifications"
 date:   2014-10-02 23:23:23
 categories: cocoa
-tags: push remote notifications apn
+tags: push remote notifications apn android ios cloud
 published: true
 ---
 
-Notifications can contain, a message, a badge, have a sound effect, contains custom json, or just indicate new content.
+Notifications can contain, a message, a badge, have a sound effect, contain custom json, or just indicate new content.
 
 ## iOS
 
@@ -79,9 +79,11 @@ Standard push notifications are now referred to as User Notifications, and have 
 Categories
 
 
-## Server side
+### Server side
 
 Sending
 https://github.com/nomad/houston
 
-## Certificates
+### Certificates
+
+# Android

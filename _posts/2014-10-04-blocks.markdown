@@ -1,8 +1,0 @@
----
-layout: post
-title:  "Blocks"
-date:   2014-10-04 23:23:23
-tags: blocks lambda callback
-category: cocoa
-published: true
----
