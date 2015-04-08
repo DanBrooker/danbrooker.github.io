@@ -73,7 +73,7 @@ The OS will track how long you take in `application:didReceiveRemoteNotification
 may not be woken up for further notifications.
 
 
-
+{% if false %}
 Standard push notifications are now referred to as User Notifications, and have also have improved capabilities.
 
 Categories
@@ -87,3 +87,4 @@ https://github.com/nomad/houston
 ### Certificates
 
 # Android
+{% endif %}
